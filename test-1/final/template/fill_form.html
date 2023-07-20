@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'form-1' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="">name</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="">email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">number</label>
+            <input type="number" name="number">
+        </div>
+        
+        <div>
+            <label for="">website</label>
+            <input type="text" name="website">
+        </div>
+        
+        <div>
+            <label for="">message</label>
+            <input type="text" name="message">
+        </div>
+        
+        <div>
+            <button type="submit"> 
+                save!
+            </button>
+        </div>
+
+    </form>
+    <div>
+        <h1>{{n}}</h1>
+    </div>
+</body>
+</html>
